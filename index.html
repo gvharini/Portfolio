@@ -1,85 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harini G - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="./assets/css/style.css">-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/hero.png" type="image/x-png">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Harini G</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <a href="" class="logo"> Harini G</a>
 
-  <section class="hero" id="about">
-    <h2>AI & Machine Learning Student</h2>
-    <p>I am looking for a position that allows me to explore my capabilities and utilize my skills effectively.</p>
-  </section>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in AI & ML</strong> - KONGU ENGINEERING COLLEGE (2022–2026) - CGPA: 7.39</li>
-      <li><strong>HSC</strong> - GOVT GIRLS HRS SCHOOL (2022) - 84.8%</li>
-      <li><strong>SSLC</strong> - GOVT GIRLS HRS SCHOOL (2020) - 75.6%</li>
-    </ul>
-  </section>
+<!-- home -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Rail Madad</h3>
-      <p>AI-powered complaint handling system using React.js, MongoDB, and ML.</p>
+    <div class="content">
+    <h2>Hi There,<br/> I'm Harini G</h2>
+    <p>i am into <span class="typing-text"></span></p>
+  
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/harini-ganesan-abb8a72a8/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/gvharini" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="Leetcode" aria-label="Leetcode" href="https://leetcode.com/u/Harinigv_28/" target="_blank"><i class="fa fa-code"></i></a></li>
+        </ul>
+      </div>
+      <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/1ToKRhNIPgYBPWpHY2K5GO5zFIybh8gnB/view?usp=sharing" target="_blank" class="btn"><span>Dwondload CV</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
     </div>
-    <div class="project">
-      <h3>ToDo List</h3>
-      <p>MERN stack app to track tasks and manage productivity.</p>
-    </div>
-    <div class="project">
-      <h3>Recipe Finder</h3>
-      <p>Find recipes by ingredients using React.js & Firebase.</p>
-    </div>
-    <div class="project">
-      <h3>E-commerce</h3>
-      <p>Online shopping web app using React.js & MongoDB.</p>
-    </div>
-  </section>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+</div>
+</section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Java, C</li>
-      <li><strong>Frontend:</strong> React.js, HTML, CSS</li>
-      <li><strong>Backend:</strong> Node.js, Express.js</li>
-      <li><strong>Database:</strong> MongoDB, SQL</li>
-      <li><strong>Tools:</strong> Git Bash, Figma, Power BI</li>
-    </ul>
-  </section>
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:harinigv12@gmail.com">harinigv12@gmail.com</a></p>
-    <p>Phone: +91 8668133722</p>
-    <div class="social-links">
-      <a href="https://github.com/gvharini" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/harini-ganesan-abb8a72a8/" target="_blank">LinkedIn</a>
-      <a href="https://leetcode.com/u/harinigv_28/" target="_blank">Leetcode</a>
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/profilepic.jpg" alt="">
     </div>
-  </section>
+    <div class="content">
+        <h3>I'm Harini G</h3>
+        <span class="tag">Full Stack Developer</span>
+        
+        <p>I am a Full-Stack developer based in Pune, India. 
+          I am an Information Technology undergraduate from SPPU.
+          I am very passionate about improving my coding skills & developing applications & websites.
+          I build WebApps and Websites using MERN Stack.
+          Working for myself to improve my skills.
+          Love to build Full-Stack clones. </p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
+            </div> -->
+            <div class="box">
+              <p><span> Email : </span> harinigv12@gmail.com</p>
+              <p><span> From : </span> Salem, TamilNadu</p>
+            </div>
+        </div>
+        
+        
 
-  <footer>
-    <p>&copy; 2025 Harini G. All rights reserved.</p>
-  </footer>
+    </div>
+    </div>
+</section>
 
-  <script src="script.js"></script>
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="content">
+        <p>B.Tech Artificial Intelligence and Machine Learning | CGPA 7.39</p>
+        <h2>KONGU ENGINEERING COLLEGE </h2>
+        <h4>2022-2026 | Pursuing</h4>
+        </div>
+    </div>
+
+    <div class="box">
+      <div class="content">
+      <p>HSC | 84.8%</p>
+      <h2>GOVT GIRLS HRS SCHOOL</h2>
+      <h4>2021-2022 | Completed</h4>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="content">
+      <p>SSLC | 75.6%</p>
+      <h2>GOVT GIRLS HRS SCHOOL</h2>
+      <h4>2019-2020 | Completed</h4>
+      </div>
+    </div>
+
+</div>
+</section>
+
+<!-- -------------------------- Projects -------------------------- -->
+<section class="project-content" id="projects">
+  <div class="container">
+    <div class="project-title">
+      <h4>My Projects</h4>
+      <p>Discover my projects, where creativity meets innovation</p>
+    </div>
+    <div class="projects">
+
+      <!-- Project 1 -->
+      <div class="project">
+        <img src="assets/images/projects/favicon.png" alt="Weather App" class="project-img" />
+        <div class="project-info">
+          <h4>Weather Application</h4>
+          <p>This app is designed to predict the weather using Flutter and OpenWeather API. Displays current conditions, forecasts, humidity, wind speed, and pressure.</p>
+          <a href="https://gvharini.github.io/BMI-calculator/" target="_blank" class="btn">View Website</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="assets/images/projects/bill-splitter.png" alt="Bill Splitter" class="project-img" />
+        <div class="project-info">
+          <h4>Bill Splitter</h4>
+          <p>This app helps split bills with a user-friendly interface. Ideal for group outings, shared living, and collaborative events.</p>
+          <a href="https://your-bill-splitter-link.com" target="_blank" class="btn">View Website</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <img src="assets/images/projects/chat-genius.png" alt="Chat Genius" class="project-img" />
+        <div class="project-info">
+          <h4>Chat Genius</h4>
+          <p>Full-stack chat app with real-time messaging, summarization, translation, tone rephrasing, and user authentication.</p>
+          <a href="https://your-chat-genius-link.com" target="_blank" class="btn">View Website</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <img src="assets/images/projects/event-management.png" alt="Event Management" class="project-img" />
+        <div class="project-info">
+          <h4>Event Management</h4>
+          <p>Platform with multi-role login, Razorpay payment, and a calendar for viewing scheduled events.</p>
+          <a href="https://your-event-management-link.com" target="_blank" class="btn">View Website</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project">
+        <img src="assets/images/projects/human-fall.png" alt="Human Fall Prediction" class="project-img" />
+        <div class="project-info">
+          <h4>Human Fall Prediction</h4>
+          <p>YOLO-based fall detection system using CNN to identify falls among elderly individuals in real time.</p>
+          <a href="https://your-human-fall-link.com" target="_blank" class="btn">View Website</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project">
+        <img src="assets/images/projects/calories-burnt.png" alt="Calories Burnt Prediction" class="project-img" />
+        <div class="project-info">
+          <h4>Calories Burnt Prediction</h4>
+          <p>ML-powered prediction system using pre-processing and algorithms to estimate caloric expenditure from activity data.</p>
+          <a href="https://your-calorie-link.com" target="_blank" class="btn">View Website</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-------------------------- Contact Me -------------------------->
+
+    <section class="contact-content" id="contact">
+        <div class="container">
+            <div class="contact-title">
+                <h4>Contact Me</h4>
+                <p>Get In Touch</p>
+            </div>
+            <div class="contact">
+                <form name="submitToGoogleSheet">
+                    <input type="text" name="NAME" placeholder="Name" required>
+                    <input type="email" name="EMAIL" placeholder="Email" required>
+                    <input type="text" name="SUBJECT" placeholder="Subject">
+                    <textarea name="MESSAGE" placeholder="Message"></textarea>
+                    <input type="submit" value="Send Message" class="submit">
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <small class="message" >Thanks for visiting and happy coding!</small>
+        <small class="copyright" style="color:rgb(22, 22, 22);">&copy; Copyright 2025. All rights reserved.</small>
+        <small class="design">Designed by Harini G </small>
+    </footer>
+
+
 </body>
 </html>
