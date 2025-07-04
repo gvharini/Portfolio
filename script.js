@@ -44,3 +44,43 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   };
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  async function fetchSkills() {
+    try {
+      const response = await fetch("skills.json");
+      const data = await response.json();
+      return data;
+    } catch (err) {
+      console.error("Error fetching skills:", err);
+    }
+  }
+
+  function showSkills(skills) {
+    const skillsContainer = document.getElementById("skillsContainer");
+    if (!skillsContainer) {
+      console.error("Element with ID 'skillsContainer' not found.");
+      return;
+    }
+
+    let skillHTML = "";
+    skills.forEach((skill) => {
+      skillHTML += `
+        <div class="bar">
+          <div class="info">
+            <img src="${skill.icon}" alt="skill icon" />
+            <span>${skill.name}</span>
+          </div>
+        </div>`;
+    });
+
+    skillsContainer.innerHTML = skillHTML;
+  }
+
+  fetchSkills().then((data) => {
+    if (data) showSkills(data);
+  });
+});

@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: rgb(235, 123, 210);
 }
 
 /* ====== HEADER ====== */
@@ -92,10 +92,10 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 4rem 10%;
-  min-height: 100vh;
+  height: 50hv;
   gap: 2rem;
-  background-color: #fff;
   overflow: hidden;
+  margin-top: 1px;
 }
 
 .home #particles-js {
@@ -121,6 +121,7 @@ header {
   flex: 1 1 400px;
   z-index: 1;
   max-width: 600px;
+  margin-left: 50px;
 }
 
 .home h2 {
@@ -308,7 +309,7 @@ header {
 /* ===== ABOUT SECTION ===== */
 .about {
   padding: 4rem 2rem;
-  background-color: #fff;
+  margin-top: 1px;
 }
 
 .about .heading {
@@ -371,6 +372,7 @@ header {
   color: #555;
   line-height: 1.6;
   margin-bottom: 1rem;
+  margin-left: 10px;
 }
 
 /* Box Info */
@@ -459,7 +461,7 @@ header {
 
 .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -494,6 +496,72 @@ header {
   font-weight: 600;
 }
 
+/* skills section ends */
+.skills {
+  padding: 4rem 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.skills .heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.skills .heading span {
+  color: #a855f7; /* accent color */
+}
+
+/* Skills Container */
+#skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Individual Skill Box */
+#skillsContainer .skill {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex: 1 1 150px;
+  max-width: 220px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#skillsContainer .skill:hover {
+  transform: translateY(-5px);
+}
+
+.skill h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Icons */
+.skill i {
+  font-size: 2rem;
+  color: #a855f7;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .skills .heading {
+    font-size: 2rem;
+  }
+  #skillsContainer .skill {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  #skillsContainer .skill {
+    max-width: 100%;
+  }
+}
+
 
 /* ====== PROJECTS SECTION ====== */
 .project-content {
@@ -517,11 +585,11 @@ header {
 }
 
 .project {
-  background: #f8f8f8;
   border-radius: 1rem;
   padding: 1rem;
   transition: 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background-color: rgb(251, 240, 240);
 }
 
 .project:hover {
@@ -529,6 +597,7 @@ header {
 }
 
 .project-img {
+  display: flex;
   width: 100%;
   border-radius: 1rem;
   margin-bottom: 1rem;
@@ -545,7 +614,13 @@ header {
   margin-bottom: 1rem;
 }
 
-/* ===== Project info Section ===== */
+.project-info .button-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto; /* 🔥 pushes to bottom */
+}
+
 /* ===== Project Info Container ===== */
 .project-info {
   display: flex;
@@ -589,7 +664,10 @@ header {
   border: 2px solid #af34a1;
   text-decoration: none;
   transition: all 0.3s ease;
+  position: static; /* ✅ Ensures it stays in normal flow */
+  margin-left: 0.5rem; /* Optional spacing from "View Demo" button */
 }
+
 
 .project-info .leetcode:hover {
   background-color: #af34a1;
@@ -643,7 +721,7 @@ header {
 /* Contact Section */
 .contact-content {
   padding: 60px 20px;
-  background: #f9f9f9;
+
 }
 
 .contact-title {
