@@ -84,3 +84,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (data) showSkills(data);
   });
 });
+

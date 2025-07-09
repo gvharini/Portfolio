@@ -443,7 +443,7 @@ header {
 /* ====== EDUCATION SECTION ====== */
 .education {
   
-  padding: 4rem 2rem;
+  padding: 1rem 20rem;
 }
 
 .education .heading {
@@ -461,8 +461,9 @@ header {
 /* Grid container */
 .box-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
   gap: 1rem;
+
 }
 
 /* Box styling */
@@ -474,6 +475,7 @@ header {
   max-width: 70%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: -60px;
 }
 
 /* Hover effect */
@@ -711,6 +713,7 @@ header {
 
 .project-title {
   text-align: center;
+  margin-top: -80px;
   margin-bottom: 3rem;
 }
 
@@ -727,11 +730,15 @@ header {
 }
 
 .project {
+  position: relative;
+  background: #fff;
   border-radius: 1rem;
-  padding: 1rem;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  background-color: rgb(251, 240, 240);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  min-height: 480px;
 }
 
 .project:hover {
@@ -739,43 +746,41 @@ header {
 }
 
 .project-img {
-  display: flex;
   width: 100%;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.project-info {
+  position: relative;
+  flex: 1;
+  padding: 1.5rem;
+  padding-bottom: 5rem; /* leave space for fixed buttons */
+  display: flex;
+  flex-direction: column;
 }
 
 .project-info h4 {
-  color:#af34a1;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #af34a1;
+  margin-bottom: 0.6rem;
 }
 
 .project-info p {
+  flex: 1;
   font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.4;
 }
 
-.project-info .button-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: auto; /* 🔥 pushes to bottom */
-}
-
-/* ===== Project Info Container ===== */
-.project-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1.2rem;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-/* ===== View Demo Button ===== */
+/* Left-bottom View Demo button */
 .project-info .btn {
-  padding: 0.65rem 1.4rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.65rem 1.3rem;
   background: #af34a1;
   color: #fff;
   text-decoration: none;
@@ -783,77 +788,39 @@ header {
   font-size: 1rem;
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(175, 52, 161, 0.15);
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .project-info .btn:hover {
   background: #d94ebd;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(175, 52, 161, 0.3);
 }
 
-/* ===== Code Icon Button ===== */
-.project-info .leetcode {
+/* Right-bottom GitHub button */
+.project-info .code {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #8e126d;
+  font-size: 1.3rem;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  color: #af34a1;
-  font-size: 1.5rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid #af34a1;
   text-decoration: none;
   transition: all 0.3s ease;
-  position: static; /* ✅ Ensures it stays in normal flow */
-  margin-left: 0.5rem; /* Optional spacing from "View Demo" button */
+  box-shadow: 0 4px 10px rgba(175, 52, 161, 0.1);
 }
 
 
-.project-info .leetcode:hover {
-  background-color: #af34a1;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(175, 52, 161, 0.3);
-}
-
-/* ===== Responsive Enhancements ===== */
+/* Responsive layout */
 @media (max-width: 768px) {
+  .project {
+    min-height: auto;
+  }
+
   .project-info {
-    justify-content: center;
-  }
-
-  .project-info .btn {
-    font-size: 0.95rem;
-    padding: 0.55rem 1.2rem;
-  }
-
-  .project-info .leetcode {
-    width: 42px;
-    height: 42px;
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-info {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-  }
-
-  .project-info .btn {
-    width: 100%;
-    text-align: center;
-    padding: 0.6rem;
-    font-size: 1rem;
-  }
-
-  .project-info .leetcode {
-    align-self: center;
-    width: 44px;
-    height: 44px;
+    padding-bottom: 4.5rem;
   }
 }
 
