@@ -6,17 +6,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+  scroll-behavior:auto;
 }
 
 body {
-  background-color: rgb(251, 250, 251);
+  background-color: rgb(1, 13, 59);
+  
 }
 
 /* ====== HEADER ====== */
 header {
   display: flex;
-  background-color: #fdecf8;
+  background-color: rgb(1, 13, 59);
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
@@ -29,9 +30,13 @@ header {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #af3198;
+  color: #20c2db;
   text-decoration: none;
 }
+.logo:hover {
+  text-shadow: 0 10px 10px #af34a1;/* You can change this to any color you like */
+}
+
 
 .navbar ul {
   list-style: none;
@@ -40,7 +45,7 @@ header {
 }
 
 .navbar a {
-  color: #333;
+  color: #fbfafa;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
@@ -128,7 +133,7 @@ header {
 .home h2 {
   font-size: 1rem;
   font-weight: 800;
-  color: #002057;
+  color: #20c2db;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
@@ -136,20 +141,15 @@ header {
 .home h2 span {
   font-size: 2.5rem;
   color: #af3198;
+  text-shadow: 0 3px 1px #5bbec0;
 }
 
 .home p {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.6;
-  color: #000;
+  color: #fbfafa;
   margin-bottom: 0.5rem;
-}
-
-.typing-text {
-  font-size: 1.2rem;
-  color: rgb(148, 8, 8);
-  font-weight: 600;
 }
 
 /* ===== Social Icons ===== */
@@ -215,12 +215,12 @@ header {
   font-weight: 500;
   font-size: 1rem;
   transition: 0.3s ease-in-out;
-  box-shadow: 0 6px 20px rgba(175, 52, 161, 0.3);
+  box-shadow: 0 6px 20px rgba(237, 230, 236, 0.3);
 }
 
 .resumebtn .btn:hover {
-  background: #d94ebd;
-  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(51, 190, 178, 0.5);
+  transform: scale(1.05);
 }
 
 /* ===== Image Section ===== */
@@ -237,13 +237,13 @@ header {
   height: 320px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 10px solid #cc1db5;
+  box-shadow: 0 10px 25px rgb(255, 255, 255);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .image img:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 30px rgba(51, 190, 178, 0.5);
   transform: scale(1.05);
 }
 
@@ -319,11 +319,18 @@ header {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #002057;
+  color: #20c2db;
+  transition: color 0.4s ease;
 }
 
+.about .heading:hover {
+  color: #20c2db;
+  text-shadow: 0 0 10px #af34a1;/* You can change this to any color you like */
+}
+
+
 .about .heading .fa-user-alt {
-  color: #8e126d;
+  color: #f120b9;
   margin-right: 0.5rem;
 }
 
@@ -347,6 +354,7 @@ header {
 }
 
 .about .image img:hover {
+  box-shadow: 0 12px 30px rgba(51, 190, 178, 0.5);
   transform: scale(1.05);
 }
 
@@ -358,7 +366,7 @@ header {
 
 .about .content h3 {
   font-size: 1.8rem;
-  color: #333;
+  color: #fbfafa;
   margin-bottom: 0.5rem;
 }
 
@@ -372,7 +380,7 @@ header {
 
 .about .content p {
   font-size: 1rem;
-  color: #555;
+  color: #fbfafa;
   line-height: 1.6;
   margin-bottom: 1rem;
   margin-left: 10px;
@@ -392,7 +400,7 @@ header {
 }
 
 .box span {
-  color: #333;
+  color: #fbfafa;
   font-weight: 600;
 }
 
@@ -450,12 +458,16 @@ header {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #002057;
+  color: #20c2db;
+}
+.education .heading:hover {
+  color: #20c2db;
+  text-shadow: 0 0 10px #af34a1;/* You can change this to any color you like */
 }
 
 .education .heading i {
   margin-right: 0.5rem;
-  color: #8e126d;
+  color: #f120b9;
 }
 
 /* Grid container */
@@ -468,21 +480,22 @@ header {
 
 /* Box styling */
 .box {
-  background-color: #fff;
+  border: 3px solid #af34a1; /* Fixed border color */
   border-radius: 1rem;
   padding: 2rem;
   margin: 0 auto;
   max-width: 70%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-left: -60px;
+  box-shadow: 0 1px 10px rgb(236, 239, 240);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover effect */
 .box:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgb(35, 208, 214);
 }
+
 
 /* Responsive Layout Enhancements */
 
@@ -515,7 +528,7 @@ header {
 .box .content p {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #fbfafa;
 }
 
 .box .content h2 {
@@ -527,7 +540,7 @@ header {
 
 .box .content h4 {
   font-size: 0.95rem;
-  color: #777;
+  color: #fbfafa;
   font-weight: 600;
 }
 
@@ -572,7 +585,7 @@ header {
 }
 .skills {
   padding: 60px 2rem;
-  color: #151515;
+  color: #fbfafa;
   text-align: center;
 }
 
@@ -580,11 +593,15 @@ header {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #002057;
+  color: #20c2db;
+}
+.skills .heading:hover {
+  color: #20c2db;
+  text-shadow: 0 0 10px #af34a1;/* You can change this to any color you like */
 }
 
 .skills .heading .fa-laptop-code {
-  color: #8e126d;
+  color: #f120b9;
   margin-right: 0.5rem;
 }
 
@@ -623,15 +640,17 @@ header {
 
 /* Skill Card */
 .bar {
+  position: relative;
   border-radius: 16px;
   padding: 1rem 1rem;
   max-width: 150px;
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.5s ease;
   text-align: center;
   color: #f8f6f6;
-  box-shadow: 0 0 0 transparent;
+  border: 3px solid #af34a1;
+  box-shadow: 0 1px 10px rgb(27, 191, 220);
 }
+
 /* Image Styling */
 .bar .info img {
   width: 50px;
@@ -651,7 +670,7 @@ header {
   font-weight: 600;
   font-size: 1rem;
   margin-top: 0.5rem;
-  color: #0f0f0f;
+  color: #fbfafa;
 }
 
 /* Media Queries for Better Responsiveness */
@@ -711,16 +730,23 @@ header {
   
 }
 
-.project-title {
+.project-titles {
   text-align: center;
-  margin-top: -80px;
+  margin-top: 10px;
   margin-bottom: 3rem;
+  color: #ccc;
 }
 
 .project-title h5 {
+  text-align: center;
+  margin-top: -80px;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #002057;
+  color: #20c2db;
+}
+.project-title :hover {
+  color: #20c2db;
+  text-shadow: 0 0 10px #af34a1;/* You can change this to any color you like */
 }
 
 .projects {
@@ -731,18 +757,44 @@ header {
 
 .project {
   position: relative;
-  background: #fff;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
   min-height: 480px;
+  padding: 2px; /* space for glowing border illusion */
+  border: 3px solid transparent;
+
+  /* Border animation + glow */
+  animation: borderColorGlow 6s linear infinite;
+  box-shadow: 0 0 15px rgba(175, 52, 161, 0.4), 0 0 25px rgba(175, 52, 161, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover {
-  transform: translateY(-5px);
+
+
+/* Animated border keyframes with gradient illusion */
+@keyframes borderColorGlow {
+  0% {
+    border-color: #af34a1;
+    box-shadow: 0 0 15px #af34a1;
+  }
+  25% {
+    border-color: #ff69b4;
+    box-shadow: 0 0 15px #ff69b4;
+  }
+  50% {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 15px #6c5ce7;
+  }
+  75% {
+    border-color: #00b894;
+    box-shadow: 0 0 15px #00b894;
+  }
+  100% {
+    border-color: #af34a1;
+    box-shadow: 0 0 15px #af34a1;
+  }
 }
 
 .project-img {
@@ -757,9 +809,11 @@ header {
   position: relative;
   flex: 1;
   padding: 1.5rem;
-  padding-bottom: 5rem; /* leave space for fixed buttons */
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .project-info h4 {
@@ -771,11 +825,11 @@ header {
 .project-info p {
   flex: 1;
   font-size: 0.95rem;
-  color: #444;
+  color: #fbfafa;
   line-height: 1.4;
 }
 
-/* Left-bottom View Demo button */
+/* View Demo Button */
 .project-info .btn {
   position: absolute;
   bottom: 1rem;
@@ -787,7 +841,7 @@ header {
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(175, 52, 161, 0.15);
+  box-shadow: 0 4px 15px rgba(211, 195, 209, 0.3);
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -796,12 +850,12 @@ header {
   transform: translateY(-2px);
 }
 
-/* Right-bottom GitHub button */
+/* GitHub Button */
 .project-info .code {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  color: #8e126d;
+  color: #f120b9;
   font-size: 1.3rem;
   border-radius: 50%;
   display: inline-flex;
@@ -809,9 +863,8 @@ header {
   justify-content: center;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(175, 52, 161, 0.1);
+  box-shadow: 0 4px 10px rgba(175, 52, 161, 0.2);
 }
-
 
 /* Responsive layout */
 @media (max-width: 768px) {
@@ -830,7 +883,7 @@ header {
 /* Contact Section */
 .contact-content {
   padding: 60px 20px;
-
+  border: #ccc;
 }
 
 .contact-title {
@@ -842,27 +895,28 @@ header {
 .contact-title h4 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color : #002057;
+  color: #20c2db;
 }
 
 .contact-title p {
   font-size: 1rem;
-  color: #666;
+  color: #fbfafa;
 }
 
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .contact form {
   width: 100%;
   max-width: 600px;
-  background: #fff;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 3px solid #af34a1;
+  box-shadow: 0 5px 40px rgb(27, 191, 220);
 }
 
 .contact form input,
@@ -878,7 +932,7 @@ header {
 
 .contact form input:focus,
 .contact form textarea:focus {
-  border-color: #007bff;
+  border-color: #d94ebd;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
 }
@@ -889,7 +943,7 @@ header {
 }
 
 .contact form .btn-primary {
-  background-color: #007bff;
+  background-color: #d94ebd;
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -903,7 +957,7 @@ header {
 }
 
 .contact form .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #33c4e9c5;
 }
 
 
@@ -950,12 +1004,11 @@ header {
   text-align: center;
   padding: 1.5rem 2rem;
   font-size: 0.9rem;
-  border-top: 1px solid #ddd;
 }
 
 .footer small {
   display: block;
-  color: #555;
+  color: #fff;
   margin: 5px 0;
 }
 

@@ -85,3 +85,51 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("mousemove", (e) => {
+  createParticle(e.clientX, e.clientY);
+});
+
+function createParticle(x, y) {
+  const particle = document.createElement("div");
+  particle.classList.add("particle");
+  document.body.appendChild(particle);
+
+  // Random color (you can use just white or customize colors)
+  const colors = ["#ffffff", "#ffb6c1", "#e0ffff", "#dda0dd", "#add8e6"];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  particle.style.background = color;
+
+  // Set position
+  particle.style.left = `${x}px`;
+  particle.style.top = `${y}px`;
+
+  // Animate particle
+  const size = Math.random() * 4 + 4;
+  particle.style.width = `${size}px`;
+  particle.style.height = `${size}px`;
+
+  const animationDuration = 1000;
+  const deltaX = (Math.random() - 0.5) * 50;
+  const deltaY = (Math.random() - 0.5) * 50;
+  const rotation = Math.random() * 360;
+
+  particle.animate([
+    {
+      transform: `translate(0, 0) rotate(0deg)`,
+      opacity: 1
+    },
+    {
+      transform: `translate(${deltaX}px, ${deltaY}px) rotate(${rotation}deg)`,
+      opacity: 0
+    }
+  ], {
+    duration: animationDuration,
+    easing: "ease-out"
+  });
+
+  // Remove after animation
+  setTimeout(() => {
+    particle.remove();
+  }, animationDuration);
+}
+
